@@ -1,9 +1,11 @@
-function reverse(str) {
-  let reversed = '';
+function reversed(str) {
+  reversed = '';
 
   for (let char of str) {
     reversed = char + reversed
   }
   console.log(reversed)
+  console.log(Date())
 }
-reverse('Mississippi')
+
+reversed('That muther fugger!!')
