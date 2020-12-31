@@ -1,9 +1,6 @@
 function reverse(str) {
-    let reversed = '';
-
-    for (let char of str) {
-        reversed = char + reversed;
-    }
-    console.log(reversed);
+    const arr = str.split('')
+    arr.reverse();
+    console.log(arr.join(''));
 }
-reverse('!Craig')
+reverse('Apple!')
