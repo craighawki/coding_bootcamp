@@ -1,4 +1,4 @@
-const numbers = [1,2,3,4,5,6,7,8,9,10];
+const numbers = [111,222,333,444,555,666,777,888,999];
 const sum = numbers.reduce(function (result, item){
     return result + item;
 }, 0);
