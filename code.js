@@ -1,9 +1,9 @@
-function reverse(str) {
-    let reversed = '';
+function reverseInt(n) {
+    const reversed = n.toString().split('').reverse().join('');
 
-    for (let char of str) {
-        reversed = char + reversed;
+    if (n < 0) {
+        return parseInt(reversed) * -1;
     }
-    console.log(reversed);
+    return parseInt(reversed);
 }
-reverse('*AppleelppA!')
+console.log(reverseInt(-1000055));
