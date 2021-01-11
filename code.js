@@ -1,9 +1,14 @@
-function reverseInt(n) {
-    const reversed = n.toString().split('').reverse().join('');
-
-    if (n < 0) {
-        return parseInt(reversed) * -1;
+function fizzBuzz(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+        } else if (i % 3 === 0) {
+            console.log('fizz');
+        } else if (i % 5 === 0) {
+            console.log('buzz');
+        } else {
+            console.log(i);
+        }
     }
-    return parseInt(reversed);
 }
-console.log(reverseInt(-1000055));
+fizzBuzz(35);
