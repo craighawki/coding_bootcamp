@@ -1,14 +1,15 @@
-function fizzBuzz(n) {
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log('fizzbuzz');
-        } else if (i % 3 === 0) {
-            console.log('fizz');
-        } else if (i % 5 === 0) {
-            console.log('buzz');
+function chunk(array, size) {
+    const chunked = [];
+
+    for (let element of array) {
+        const last = chunked[chunked.length - 1];
+
+        if (!last || last.length === size) {
+            chunked.push([element]);
         } else {
-            console.log(i);
+            last.push(element);
         }
     }
+    return chunked;
 }
-fizzBuzz(35);
+console.log(chunk([1,2,3,4,5,6,7], 2));

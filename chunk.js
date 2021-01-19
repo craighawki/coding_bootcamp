@@ -10,8 +10,6 @@ function chunk(array, size) {
             last.push(element);
         }
     }
-
     return chunked;
 }
-
-console.log(chunk([1,2,3,4,5], 2));
+console.log(chunk([1,2,3,4,5,6,7,8,9,0], 2))
