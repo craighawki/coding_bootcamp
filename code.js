@@ -1,11 +1,25 @@
-function chunk(array, size) {
-    const chunked = [];
-    let index = 0;
+function anagrams(stringA, stringB) {
+    const aCharMap = buildCharMap(stringA);
+    const bCharMap = buildCharMap(stringB);
 
-    while (index < array.length) {
-        chunked.push(array.slice(index, index + size));
-        index += size;
+    if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+        return false;
     }
-    return chunked;
+
+    for (let char in aCharMap) {
+        if (aCharMap[char] !== bCharMap[char]) {
+            return false;
+        }
+    }
+    return true;
 }
-console.log(chunk([1,2,3,4,5,6,7], 2));
+
+function buildCharMap(str) {
+    const charMap = {};
+
+    for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+        charMap[char] = charMap[char] + 1 || 1;
+    }
+    return charMap;
+}
+console.log(anagrams('ample', 'maple'));

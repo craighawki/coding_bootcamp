@@ -1,6 +1,6 @@
 function anagrams(stringA, stringB) {
-    const aCharMap = buildCharMap(stringA);
-    const bCharMap = buildCharMap(stringB);
+    const aCharMap = buildCharMap(stringA)
+    const bCharMap = buildCharMap(stringB)
 
     if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
         return false;
@@ -22,4 +22,5 @@ function buildCharMap(str) {
     }
     return charMap;
 }
-console.log(anagrams('apple', 'maple'));
+console.log(anagrams('Ohio', 'ohios'));
+
